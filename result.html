@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Health Score Generator</title>
+</head>
+<header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">Health Score Generator</span>
+      </a>
+      <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+      </nav>
+    </div>
+</header>
+<section class="text-gray-400 body-font bg-gray-900">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Your Results,</h1>
+        <p class="lg:w-1/2 w-full leading-relaxed text-opacity-80">//Insert Health status line</p>
+      </div>
+      <a href="index.html" class="button"></a>
+      <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-4 items-center justify-center flex-col">
+          <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://images.unsplash.com/photo-1518335935020-cfd6580c1ab4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+          <div class="text-center lg:w-2/3 w-full">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">//Your health score is *insert result*</h1>
+            <p class="leading-relaxed mb-8">//Detailed feedback</p>
+          </div>
+        </div>
+      </section>
+      <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="location.href='home.html';">Go to Home Page</button>
+      <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="button" onclick="window.close()">Discard</button>
+    </div>
+   
+  </section>
+  
+  
+  <script>
+    function displayRadioValue() {
+              document.getElementById("result").innerHTML = "";
+              var ele = document.getElementsByTagName('input');
+              var sum = 0;
+                
+              for(i = 0; i < ele.length; i++) {
+                    
+                  if(ele[i].type="radio") {
+                    
+                      if(ele[i].checked)
+                          //var myInt = parseInt(ele[i].value)
+                          document.getElementById("result").index.innerHTML
+                                  += ele[i].name + " Value: "
+                                  + ele[i].value + "<br>"
+                                  //+ sum;
+                                  //sum = sum + ele[i].value;
+                                  //onclick="location.href='result.html';" for button above
+                                 
+                  }
+              }
+          }
+  </script>
+</html>
