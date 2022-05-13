@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Health Score Generator</title>
+</head>
+<body>
+  <div id="content">
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-lg-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Health Score Generator</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+          </nav>
+         
+          <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+              <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0" >
+                <img class="object-cover object-center rounded-lg" alt="hero" style="width: 512px; height: 384px" src="https://images.unsplash.com/photo-1576179635662-9d1983e97e1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80">
+              </div>
+              <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">How often do you eat healthy food?
+                </h1>
+                <p class="mb-8 leading-relaxed">Healthy foods are those that provide you with the nutrients you need to sustain your body’s well-being and retain energy. Water, carbohydrates, fat, protein, vitamins, and minerals are the key nutrients that make up a healthy, balanced diet.</p>
+                <form id="food" style="display:flex; flex-direction:column; align-content: center;">
+                    <div class="mb-2"><input type="radio" id="f1" name="food" value="10"> Almost every day</div>
+                    <div class="mb-2"><input type="radio" id="f2" name="food" value="8"> Once in a while</div>
+                    <div class="mb-2"><input type="radio" id="f3" name="food" value="6" > Rarely or never</div>
+                </form> 
+              </div>
+            </div>
+        </div>
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+              <img class="object-cover object-center rounded-lg" style="width: 512px; height: 384px" alt="hero" src="https://images.unsplash.com/photo-1543627633-0643fe92d06f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=504&q=80">
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+              <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">How often do you Exercise or perform physical activity like jogging, swimming, etc.?
+              </h1>
+              <p class="mb-8 leading-relaxed">Physical activity or exercise can improve your health and reduce the risk of developing several diseases like type 2 diabetes, cancer and cardiovascular disease. Physical activity and exercise can have immediate and long-term health benefits. Most importantly, regular activity can improve your quality of life.</p>
+              <form id="exercise" style="display:flex; flex-direction:column; align-content: center;">
+                <div class="mb-2"><input type="radio" id="ex1" name="exercise" value="13"> Daily</div>
+                <div class="mb-2"><input type="radio" id="ex2" name="exercise" value="11"> Most every day</div>
+                <div class="mb-2"><input type="radio" id="ex3" name="exercise" value="6"> Less than 3 times a week</div>
+                <div class="mb-2"><input type="radio" id="ex4" name="exercise" value="5"> Rarely</div>
+            </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+              <img class="object-cover object-center rounded-lg" style="width: 512px; height: 384px" alt="hero" src="https://images.unsplash.com/photo-1519003300449-424ad0405076?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2xlZXB8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60">
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+              <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">How many hours do you usually sleep per night?
+              </h1>
+              <p class="mb-8 leading-relaxed">Getting enough sleep is essential for helping a person maintain optimal health and well-being. When it comes to their health, sleep is as vital as regular exercise and eating a balanced diet.</p>
+
+              <form id="sleep" style="display:flex; flex-direction:column; align-content: center;">
+                <div class="mb-2"><input type="radio" id="sl1" name="sleep" value="5"> 5 hours or less</div>
+                <div class="mb-2"><input type="radio" id="sl2" name="sleep" value="9"> 6 hours</div>
+                <div class="mb-2"><input type="radio" id="sl3" name="sleep" value="11"> 7-8 hours</div>
+                <div class="mb-2"><input type="radio" id="sl3" name="sleep" value="7"> 9 hours or more</div>
+            </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+              <img class="object-cover object-center rounded-lg" style="width: 512px; height: 384px" alt="hero" src="https://images.unsplash.com/photo-1587773403675-ba676c122bf3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YWxjb2hvbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60">
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+              <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">How many servings of alcohol do you drink in a week?
+              </h1>
+              <p class="mb-8 leading-relaxed">If you enjoy alcohol and don’t binge, there is no compelling reason to avoid it. Just keep in mind that your cancer risk may increase — regardless of how much you are drinking.
+                <br> However, if you tend to drink excessively or notice that alcohol causes problems in your life, you should avoid it as much as possible.
+                Because alcohol impact depends entirely on the individual, it’s good for some and disastrous for others.</p>
+              <form id="alcohol" style="display:flex; flex-direction:column; align-content: center;">
+                <div class="mb-2"><input type="radio" id="al1" name="alcohol" value="11"> None</div>
+                <div class="mb-2"><input type="radio" id="al2" name="alcohol" value="9"> 1-2 Servings</div>
+                <div class="mb-2"><input type="radio" id="al3" name="alcohol" value="5"> 3-10 Servings</div>
+                <div class="mb-2"><input type="radio" id="al3" name="alcohol" value="1"> Over 10 Servings</div>
+            </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+              <img class="object-cover object-center rounded-lg" style="width: 512px; height: 384px" alt="hero" src="https://media.istockphoto.com/photos/smoking-cigarettes-tobacco-in-hand-with-a-softfocus-concept-quit-are-picture-id951149066?b=1&k=20&m=951149066&s=170667a&w=0&h=aU3HW8bmcvb8GDjy84h0X-UWZ-Bc5pBU6bqj_xXZ4qc=">
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+              <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Do you Smoke?
+              </h1>
+              <p class="mb-8 leading-relaxed"> Smoking can affect every part of the body - from your skin to your brain. Outside the lungs smoking causes heart attacks, strokes and cancer. On average, smokers live 10 years less than non-smokers. Smoking tobacco is the biggest avoidable cause of death..</p>
+              <form id="smoking" style="display:flex; flex-direction:column; align-content: center;">
+                <div class="mb-2"><input type="radio" id="sm1" name="smoking" value="11"> I have never smoked</div>
+                <div class="mb-2"><input type="radio" id="sm2" name="smoking" value="9"> I have quit smoking</div>
+                <div class="mb-2"><input type="radio" id="sm3" name="smoking" value="3"> I smoke less than 1 pack a day</div>
+                <div class="mb-2"><input type="radio" id="sm4" name="smoking" value="0"> I smoke more than 1 pack a day</div>
+            </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+              <img class="object-cover object-center rounded-lg" style="width: 512px; height: 384px" alt="hero" src="https://media.istockphoto.com/photos/hands-holding-brain-with-puzzle-paper-cutout-autism-epilepsy-and-picture-id1272508891?b=1&k=20&m=1272508891&s=170667a&w=0&h=JOG99bUYhWHyYsZJ2dQLYIFmfFzwCHAOBCWXGdEiWiY=">
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+              <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">How have you been feeling emotionally in the past few weeks?
+              </h1>
+              <p class="mb-8 leading-relaxed">Emotional health allows you to work productively and cope with the stresses of everyday life. It can help you realize your full potential. It helps you work with other people and contribute to society.<br>
+                It also affects your physical health. Research shows a link between an upbeat mental state and physical signs of good health. These include lower blood pressure, reduced risk of heart disease, and a healthier weight.</p>
+              <form id="ehealth" style="display:flex; flex-direction:column; align-content: center;">
+                <div class="mb-2"><input type="radio" id="em1" name="eHealth" value="11"> Happy</div>
+                <div class="mb-2"><input type="radio" id="em2" name="eHealth" value="9"> Up and down</div>
+                <div class="mb-2"><input type="radio" id="em3" name="eHealth" value="7"> Sad</div>
+                <div class="mb-2"><input type="radio" id="em4" name="eHealth" value="5"> Depressed</div>
+            </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="rounded-lg-lg h-64 overflow-hidden">
+                  <img alt="content" class="object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1485827031228-b1736cb1fd06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80">
+                </div>
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Age</h2>
+                <p class="text-base leading-relaxed mt-2">Enter your age Below</p>
+                <input type="text" placeholder="yrs" pattern="[0-9]*" class="input valid border" name="age" id="age" value="" size="3" >
+              <p id="age-field" style='color:#d9362c'></p>		
+              </div>
+              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="rounded-lg-lg h-64 overflow-hidden">
+                  <img alt="content" class="object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1559724087-a45f6a7a35d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80">
+                </div>
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Weight</h2>
+                <p class="text-base leading-relaxed mt-2">Enter your Weight Below</p>		
+                  <input type="text" placeholder="kgs" pattern="[0-9]*" class="input border" name="weight" id="weight" value="" size="5" >
+                      <p id="weight-field" style='color:#d9362c'></p>
+              </div>
+              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="rounded-lg-lg h-64 overflow-hidden">
+                  <img alt="content" class="object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1611077543575-445af69a7adf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+                </div>
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Waist</h2>
+                <p class="text-base leading-relaxed mt-2">Enter your waist size below</p>
+                <input type="text" placeholder="in" pattern="[0-9]*" class="input border" name="waist_in" id="waist_in" value="" size="3" >
+              </div>
+              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="rounded-lg-lg h-64 overflow-hidden">
+                  <img alt="content" class="object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1614075997973-b3e91fb9cb3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80">
+                </div>
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Height</h2>
+                <select class="input" name="member_height_in" id="ht" onblur="healthcalc(this.form)">
+                  <option value="">ft./in.</option>
+                  <optgroup label="3 foot">
+                    <option value="36">3' 0"</option>
+                    <option value="37">3' 1"</option>
+                    <option value="38">3' 2"</option>
+                    <option value="39">3' 3"</option>
+                    <option value="40">3' 4"</option>
+                    <option value="41">3' 5"</option>
+                    <option value="42">3' 6"</option>
+                    <option value="43">3' 7"</option>
+                    <option value="44">3' 8"</option>
+                    <option value="45">3' 9"</option>
+                    <option value="46">3' 10"</option>
+                    <option value="47">3' 11"</option>
+                  </optgroup>
+                  <optgroup label="4 foot">
+                    <option value="48">4' 0"</option>
+                    <option value="49">4' 1"</option>
+                    <option value="50">4' 2"</option>
+                    <option value="51">4' 3"</option>
+                    <option value="52">4' 4"</option>
+                    <option value="53">4' 5"</option>
+                    <option value="54">4' 6"</option>
+                    <option value="55">4' 7"</option>
+                    <option value="56">4' 8"</option>
+                    <option value="57">4' 9"</option>
+                    <option value="58">4' 10"</option>
+                    <option value="59">4' 11"</option>
+                  </optgroup>
+                  <optgroup label="5 foot">
+                    <option value="60">5' 0"</option>
+                    <option value="61">5' 1"</option>
+                    <option value="62">5' 2"</option>
+                    <option value="63">5' 3"</option>
+                    <option value="64">5' 4"</option>
+                    <option value="65">5' 5"</option>
+                    <option value="66">5' 6"</option>
+                    <option value="67">5' 7"</option>
+                    <option value="68">5' 8"</option>
+                    <option value="69">5' 9"</option>
+                    <option value="70">5' 10"</option>
+                    <option value="71">5' 11"</option>
+                  </optgroup>
+                  <optgroup label="6 foot">
+                    <option value="72">6' 0"</option>
+                    <option value="73">6' 1"</option>
+                    <option value="74">6' 2"</option>
+                    <option value="75">6' 3"</option>
+                    <option value="76">6' 4"</option>
+                    <option value="77">6' 5"</option>
+                    <option value="78">6' 6"</option>
+                    <option value="79">6' 7"</option>
+                    <option value="80">6' 8"</option>
+                    <option value="81">6' 9"</option>
+                    <option value="82">6' 10"</option>
+                    <option value="83">6' 11"</option>
+                  </optgroup>
+                  <optgroup label="7 foot">
+                    <option value="84">7' 0"</option>
+                    <option value="85">7' 1"</option>
+                    <option value="86">7' 2"</option>
+                    <option value="87">7' 3"</option>
+                    <option value="88">7' 4"</option>
+                    <option value="89">7' 5"</option>
+                    <option value="90">7' 6"</option>
+                    <option value="91">7' 7"</option>
+                    <option value="92">7' 8"</option>
+                    <option value="93">7' 9"</option>
+                    <option value="94">7' 10"</option>
+                    <option value="95">7' 11"</option>
+                  </optgroup>
+                  <optgroup label="8 foot">
+                    <option value="96">8' 0"</option>
+                    <option value="97">8' 1"</option>
+                    <option value="98">8' 2"</option>
+                    <option value="99">8' 3"</option>
+                    <option value="100">8' 4"</option>
+                    <option value="101">8' 5"</option>
+                    <option value="102">8' 6"</option>
+                    <option value="103">8' 7"</option>
+                    <option value="104">8' 8"</option>
+                    <option value="105">8' 9"</option>
+                    <option value="106">8' 10"</option>
+                    <option value="107">8' 11"</option>
+                  </optgroup>
+                </select>
+              <p id="height-field" style='color:#d9362c'></p>
+            </div>
+          </div>
+        </section>
+        <button class="flex mx-auto mt-8 text-white bg-yellow-500 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg" onclick="showRate()" style="margin-bottom: 40px;">Submit</button>
+      </div>
+        <div id="result">
+          
+        </div>
+      </header>
+</body>
